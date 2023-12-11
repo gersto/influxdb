@@ -128,6 +128,29 @@ Dokumentation unter:<br>
 - [https://docs.influxdata.com/flux/v0/](https://docs.influxdata.com/flux/v0/)
 - [https://docs.influxdata.com/flux/v0/stdlib/universe/filter/](https://docs.influxdata.com/flux/v0/stdlib/universe/filter/)
 
+Beispiel: Wie teuer war mein Strom
+
+![influxdb15](pictures/influxdb15.jpg)
+
+Zuerst der Verlauf des Zählerstandes:<br>
+![influxdb16](pictures/influxdb16.jpg)
+
+Jetzt die Kosten errechnen:<br>
+![influxdb17](pictures/influxdb17.jpg)
+
+Diese Scripte können direkt in das Dashboard integiert werden oder in Grafana verwendet werden.
+
+## Tasks
+
+Falls man z.B. alle 2 Sekunden einen Datensatz speichert --> 43200 Datensätze pro Tag
+
+Um die Datensätze in einem Langzeitspeicher zu aggregieren kann man Tasks verwenden
+
+Beipiel:<br>
+- neues Bucket -> z.B. test-langzeit mit keiner Retension-Zeit
+- neuer Task (Every 24h) oder mit einer Cron-Expression (0 0 * * *)
+- ![influxdb18](pictures/influxdb18.jpg)
+- Tasks kann man jederzeit auch direkt ausführen
 
 
 
